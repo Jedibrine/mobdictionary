@@ -1,0 +1,148 @@
+
+lotr.menu.title=The Lord of the Rings Mod: A trazer a Terra-média para o Minecraft
+
+lotr.date.shire=R.C.
+lotr.date.shire.day.hevensday=Quarta-Feira
+lotr.date.shire.day.highday=Sexta-Feira
+lotr.date.shire.day.mersday=Quinta-Feira
+lotr.date.shire.day.monday=Segunda-Feira
+lotr.date.shire.day.sterday=Sábado
+lotr.date.shire.day.sunday=Domingo
+lotr.date.shire.day.trewsday=Terça-Feira
+lotr.date.shire.long=Registro do Shire
+lotr.date.shire.month.afterlithe=Pós Lite
+lotr.date.shire.month.afteryule=Pós Iule
+lotr.date.shire.month.astron=Pasco
+lotr.date.shire.month.blotmath=Libamês
+lotr.date.shire.month.forelithe=Pré Lite
+lotr.date.shire.month.foreyule=Pré Iule
+lotr.date.shire.month.halimath=Sacromês
+lotr.date.shire.month.lithe1=1 Lite
+lotr.date.shire.month.lithe2=2 Lite
+lotr.date.shire.month.midyearsday=Dia do Meio Ano
+lotr.date.shire.month.overlithe=Sobrelite
+lotr.date.shire.month.rethe=Louvoso
+lotr.date.shire.month.solmath=Lamamês
+lotr.date.shire.month.thrimidge=Tremunge
+lotr.date.shire.month.wedmath=Ervamês
+lotr.date.shire.month.winterfilth=Cerrinverno
+lotr.date.shire.month.yule1=1 Iule
+lotr.date.shire.month.yule2=2 Iule
+
+lotr.gui.daleCracker=Rebuçado De Dale
+
+lotr.biome.forodwaith.name=Forodwaith
+lotr.biome.forodwaithCoast.name=Costas de Forodwaith
+lotr.biome.forodwaithGlacier.name=Glaciares de Forodwaith
+lotr.biome.forodwaithMountains.name=Montanhas de Forodwaith
+
+lotr.achievement.category.FORODWAITH=Forodwaith
+lotr.achievement.enterForodwaith.desc=Entre na região de Forodwaith
+
+lotr.faction.FANGORN.entity=Árvores de Fangorn
+lotr.faction.FANGORN.name=Fangorn
+
+lotr.faction.UTUMNO.entity=Cria de Utumno
+lotr.faction.UTUMNO.name=Utumno
+lotr.faction.UTUMNO.subtitle=Criaturas antigas e más
+
+entity.lotr.GondorRuinsWraith.name=Espectro de Ruínas de Gondor
+entity.lotr.ShirePony.name=Pônei do Shire
+
+item.lotr.cracker.sealedByDale=Fabricante de Brinquedos de Dale
+item.lotr:bodyDolAmrothGambeson.name=Colete Dol Amroth
+item.lotr:daleCracker.name=Rubuçado Surpresa de Dale
+item.lotr:dalishPastry.name=Doce de Dalle
+item.lotr:hobbitPancake.name=Panqueca de Hobbit
+item.lotr:hobbitPancakeMapleSyrup.name=Panqueca de Hobbit com Xarope de Ácer
+item.lotr:legsDolAmrothGambeson.name=Calças de Dol Amroth
+
+tile.lotr:beacon.name=Farol de Gondor
+tile.lotr:chandelier.10.name=Lustre de Elfo Alto
+tile.lotr:chandelier.12.name=Lustre de Morgul
+tile.lotr:doorMirkOak.name=
+tile.lotr:doorShirePine.name=
+tile.lotr:fence.0.name=Cerca de Madeira de Pinheiro do Shire
+tile.lotr:fence.2.name=Cerca de Madeira de Mirkwood
+tile.lotr:fenceGateMirkOak.name=
+tile.lotr:fenceGateShirePine.name=
+tile.lotr:gateElven.name=Portão Galadhrim
+tile.lotr:gateHighElven.name=Portão de Elfo Alto
+tile.lotr:leaves.0.name=Folhas de Pinheiro do Shire
+tile.lotr:leaves.2.name=Folhas de Mirkwood
+tile.lotr:mirkVines.name=Vinhas da Floresta das Trevas
+
+tile.lotr:mordorGrass.name=Arbusto de Mordor
+
+tile.lotr:planks.0.name=Tábuas de Madeira de Pinheiro do Shire
+tile.lotr:planks.2.name=Tábuas de Madeira de Mirkwood
+tile.lotr:sapling.0.name=Rebento de Pinheiro do Shire
+tile.lotr:sapling.2.name=Rebento de Mirkwood
+tile.lotr:shireHeather.name=Urze do Shire
+tile.lotr:stairsMirkOak.name=Escadas de Mirkwood
+tile.lotr:stairsPine.name=Escadas de Madeira de Pinho do Shire
+
+tile.lotr:wood.0.name=Madeira de Pinheiro do Shire
+tile.lotr:wood.2.name=Madeira de Mirkwood
+tile.lotr:woodBeam1.0.name=Barrote de Madeira de Pinheiro do Shire
+tile.lotr:woodBeam1.2.name=Barrote de Madeira de Mirkwood
+tile.lotr:woodSlabSingle.0.name=Laje de Madeira de Pinheiro do Shire
+tile.lotr:woodSlabSingle.2.name=Laje de Madeira de Mirkwood
+
+tile.lotr:rock.1.name=Rocha de Gondor
+lotr.structure.RuinedRohanWatchtower.name=Torre de Observação Arruinada de Rohan
+
+entity.lotr.IronHillsMerchant.name=Comerciante das Colinas de Ferro
+
+lotr.achievement.tradeIronHillsMerchant.title=Tesouros dos Anões
+lotr.achievement.tradeIronHillsMerchant.desc=Negocie com um Comerciante das Colinas de Ferro
+lotr.achievement.openDaleCracker.title=Surpresa!
+lotr.achievement.openDaleCracker.desc=Abra um rebuçado de Dale
+
+tile.lotr:hobbitOven.name=Forno de Hobbit
+container.lotr.hobbitOven=Forno de Hobbit
+lotr.achievement.useDunlendingTrident.title=Pesca à moda Dunlending
+lotr.achievement.useDunlendingTrident.desc=Pegue um peixe com um tridente de Dunlendings
+
+lotr.faction.FANGORN.rank.newcomer=
+lotr.faction.FANGORN.rank.newcomer.f=
+lotr.faction.FANGORN.rank.friend=
+lotr.faction.FANGORN.rank.friend.f=
+lotr.faction.FANGORN.rank.treeherd=
+lotr.faction.FANGORN.rank.treeherd.f=
+lotr.faction.FANGORN.rank.master=
+lotr.faction.FANGORN.rank.master.f=
+lotr.faction.FANGORN.rank.elder=
+lotr.faction.FANGORN.rank.elder.f=
+
+item.lotr:maceMallornCharred.name=Maça de Mallorn Carbonizado
+
+tile.lotr:blueDwarvenCraftingTable.name=Mesa de Trabalho de Anão Azul
+container.lotr.crafting.blueDwarven=Trabalhos das Montanhas Azuis
+
+tile.lotr:trapdoorMirkOak.name=
+
+entity.lotr.BlueDwarf.name=Anão das Montanhas Azuis
+entity.lotr.BlueDwarfWarrior.name=Guerreiro das Montanhas Azuis
+entity.lotr.BlueDwarfAxeThrower.name=Arremessador de Machados das Montanhas Azuis
+entity.lotr.BlueDwarfBannerBearer.name=Porta Estandarte das Montanhas Azuis
+entity.lotr.BlueDwarfCommander.name=Comandante das Montanhas Azuis
+entity.lotr.BlueDwarfMiner.name=Mineiro das Montanhas Azuis
+
+item.lotr:swordBlueDwarven.name=Espada de Anão Azul
+item.lotr:daggerBlueDwarven.name=Adaga de Anão Azul
+item.lotr:daggerBlueDwarvenPoisoned.name=Adaga Envenenada de Anão Azul
+item.lotr:battleaxeBlueDwarven.name=Machado de Batalha de Anão Azul
+item.lotr:hammerBlueDwarven.name=Martelo de Guerra de Anão Azul
+item.lotr:throwingAxeBlueDwarven.name=Machado de Arremesso de Anão Azul
+item.lotr:helmetBlueDwarven.name=Capacete de Anão Azul
+item.lotr:bodyBlueDwarven.name=Peitoral de Anão Azul
+item.lotr:legsBlueDwarven.name=Perneiras de Anão Azul
+item.lotr:bootsBlueDwarven.name=Botas de Anão Azul
+item.lotr:spearBlueDwarven.name=Lança de Anão Azul
+item.lotr:pikeBlueDwarven.name=Pique de Anão Azul
+
+item.lotr:redBook.name=Livro Vermelho
+
+item.lotr:mallornNut.name=Noz de Mallorn
+tile.lotr:highElvenTorch.name=Tocha de Elfo Alto

@@ -1,0 +1,148 @@
+
+lotr.menu.title=Taru sormusten herrasta -modi: Tuo Keski-Maan Minecraftiin
+
+lotr.date.shire=K.L.
+lotr.date.shire.day.hevensday=Keskiviikko
+lotr.date.shire.day.highday=Perjantai
+lotr.date.shire.day.mersday=Torstai
+lotr.date.shire.day.monday=Maanantai
+lotr.date.shire.day.sterday=Lauantai
+lotr.date.shire.day.sunday=Sunnuntai
+lotr.date.shire.day.trewsday=Tiistai
+lotr.date.shire.long=Konnunlasku
+lotr.date.shire.month.afterlithe=Takalith
+lotr.date.shire.month.afteryule=Jälkijule
+lotr.date.shire.month.astron=Astron
+lotr.date.shire.month.blotmath=Blotmath
+lotr.date.shire.month.forelithe=Etulith
+lotr.date.shire.month.foreyule=Julenala
+lotr.date.shire.month.halimath=Halimath
+lotr.date.shire.month.lithe1=Ykköslith
+lotr.date.shire.month.lithe2=Kakkoslith
+lotr.date.shire.month.midyearsday=Keskivuoden päivä
+lotr.date.shire.month.overlithe=Ylilith
+lotr.date.shire.month.rethe=Rethe
+lotr.date.shire.month.solmath=Solmath
+lotr.date.shire.month.thrimidge=Thrimidz
+lotr.date.shire.month.wedmath=Wedmath
+lotr.date.shire.month.winterfilth=Talvenfilth
+lotr.date.shire.month.yule1=Ykkösjule
+lotr.date.shire.month.yule2=Kakkosjule
+
+lotr.gui.daleCracker=Laaksolainen onnenkeksi
+
+lotr.biome.forodwaith.name=Forodwaith
+lotr.biome.forodwaithCoast.name=Forodwaithin rannikko
+lotr.biome.forodwaithGlacier.name=Forodwaithin jäätikkö
+lotr.biome.forodwaithMountains.name=Forodwaithin vuoret
+
+lotr.achievement.category.FORODWAITH=Forodwaith
+lotr.achievement.enterForodwaith.desc=Saavu Forodwaithin alueelle
+
+lotr.faction.FANGORN.entity=Fangornin puujätit
+lotr.faction.FANGORN.name=Fangorn
+
+lotr.faction.UTUMNO.entity=Utumnon kammotukset
+lotr.faction.UTUMNO.name=Utumno
+lotr.faction.UTUMNO.subtitle=Kaikista olennoista vanhimmat ja pahimmat
+
+entity.lotr.GondorRuinsWraith.name=Gondorin raunioiden aave
+entity.lotr.ShirePony.name=Konnunponi
+
+item.lotr.cracker.sealedByDale=Laaksolaiset lelusepät
+item.lotr:bodyDolAmrothGambeson.name=Dol Amrothin asetakki
+item.lotr:daleCracker.name=Laaksolainen onnenkeksi
+item.lotr:dalishPastry.name=Laaksolainen leivos
+item.lotr:hobbitPancake.name=Hobittien pannukakku
+item.lotr:hobbitPancakeMapleSyrup.name=Hobittien pannukakku siirapin kera
+item.lotr:legsDolAmrothGambeson.name=Dol Amrothin asehousut
+
+tile.lotr:beacon.name=Gondorin kokko
+tile.lotr:chandelier.10.name=Suurhaltioiden kattokruunu 
+tile.lotr:chandelier.12.name=Morgulin kattokruunu 
+tile.lotr:doorMirkOak.name=
+tile.lotr:doorShirePine.name=
+tile.lotr:fence.0.name=Konnunmäntyaita 
+tile.lotr:fence.2.name=Synkän tammen puuaita 
+tile.lotr:fenceGateMirkOak.name=
+tile.lotr:fenceGateShirePine.name=
+tile.lotr:gateElven.name=Galadhrimin portti
+tile.lotr:gateHighElven.name=Suurhaltioiden portti
+tile.lotr:leaves.0.name=Konnunmännyn havut
+tile.lotr:leaves.2.name=Synkän tammen lehdet
+tile.lotr:mirkVines.name=Synkmetsän köynnökset
+
+tile.lotr:mordorGrass.name=Mordorin pensas
+
+tile.lotr:planks.0.name=Konnunmäntylankut
+tile.lotr:planks.2.name=Synkän tammen lankut 
+tile.lotr:sapling.0.name=Konnunmännyn taimi 
+tile.lotr:sapling.2.name=Synkän tammen taimi 
+tile.lotr:shireHeather.name=Konnunkanerva 
+tile.lotr:stairsMirkOak.name=Synkän tammen portaat 
+tile.lotr:stairsPine.name=Konnunmäntyportaat 
+
+tile.lotr:wood.0.name=Konnunmäntypuu
+tile.lotr:wood.2.name=Synkkä tammipuu
+tile.lotr:woodBeam1.0.name=Konnunmäntyparru
+tile.lotr:woodBeam1.2.name=Synkkä tammiparru
+tile.lotr:woodSlabSingle.0.name=Konnunmäntylaatta 
+tile.lotr:woodSlabSingle.2.name=Synkkä tammilaatta 
+
+tile.lotr:rock.1.name=Gondorin kivi
+lotr.structure.RuinedRohanWatchtower.name=Raunioitunut Rohanin vahtitorni
+
+entity.lotr.IronHillsMerchant.name=Rautavuorten kauppias
+
+lotr.achievement.tradeIronHillsMerchant.title=Kääpiöaarteita
+lotr.achievement.tradeIronHillsMerchant.desc=Tee kauppaa Rautavuorten kauppiaan kanssa
+lotr.achievement.openDaleCracker.title=Yllätys!
+lotr.achievement.openDaleCracker.desc=Avaa laaksolainen onnenkeksi
+
+tile.lotr:hobbitOven.name=Hobittiuuni 
+container.lotr.hobbitOven=Hobittiuuni
+lotr.achievement.useDunlendingTrident.title=Päivän saalis
+lotr.achievement.useDunlendingTrident.desc=Nappaa kala Mustainmaan atraimella
+
+lotr.faction.FANGORN.rank.newcomer=
+lotr.faction.FANGORN.rank.newcomer.f=
+lotr.faction.FANGORN.rank.friend=
+lotr.faction.FANGORN.rank.friend.f=
+lotr.faction.FANGORN.rank.treeherd=
+lotr.faction.FANGORN.rank.treeherd.f=
+lotr.faction.FANGORN.rank.master=
+lotr.faction.FANGORN.rank.master.f=
+lotr.faction.FANGORN.rank.elder=
+lotr.faction.FANGORN.rank.elder.f=
+
+item.lotr:maceMallornCharred.name=Hiiltynyt mallorn-nuija
+
+tile.lotr:blueDwarvenCraftingTable.name=Sinivuorten työpöytä
+container.lotr.crafting.blueDwarven=Sinivuorten työstö
+
+tile.lotr:trapdoorMirkOak.name=
+
+entity.lotr.BlueDwarf.name=Sinivuorten kääpiö
+entity.lotr.BlueDwarfWarrior.name=Sinivuorten kääpiösoturi
+entity.lotr.BlueDwarfAxeThrower.name=Sinivuorten kirveenheittäjä
+entity.lotr.BlueDwarfBannerBearer.name=Sinivuorten lipunkantaja
+entity.lotr.BlueDwarfCommander.name=Sinivuorten kääpiökomentaja
+entity.lotr.BlueDwarfMiner.name=Sinivuorten kaivosten kääpiö
+
+item.lotr:swordBlueDwarven.name=Sinikääpiömiekka
+item.lotr:daggerBlueDwarven.name=Sinikääpiötikari
+item.lotr:daggerBlueDwarvenPoisoned.name=Myrkytetty sinikääpiötikari
+item.lotr:battleaxeBlueDwarven.name=Sinikääpiöiden sotakirves
+item.lotr:hammerBlueDwarven.name=Sinikääpiöiden sotavasara
+item.lotr:throwingAxeBlueDwarven.name=Sinikääpiöiden heittokirves
+item.lotr:helmetBlueDwarven.name=Sinikääpiökypärä
+item.lotr:bodyBlueDwarven.name=Sinikääpiöiden rintapanssari
+item.lotr:legsBlueDwarven.name=Sinikääpiöhousut
+item.lotr:bootsBlueDwarven.name=Sinikääpiösaappaat
+item.lotr:spearBlueDwarven.name=Sinikääpiökeihäs
+item.lotr:pikeBlueDwarven.name=Sinikääpiöseiväs
+
+item.lotr:redBook.name=Punainen kirja
+
+item.lotr:mallornNut.name=Mallornin pähkinä
+tile.lotr:highElvenTorch.name=Suurhaltiosoihtu 

@@ -1,0 +1,148 @@
+
+lotr.menu.title=
+
+lotr.date.shire=Ш.Р.
+lotr.date.shire.day.hevensday=Хевендан
+lotr.date.shire.day.highday=Високидан
+lotr.date.shire.day.mersday=Мердан
+lotr.date.shire.day.monday=Понедјељак
+lotr.date.shire.day.sterday=Стердан
+lotr.date.shire.day.sunday=Недјеља
+lotr.date.shire.day.trewsday=Тревдан
+lotr.date.shire.long=Шајерско Рачунање
+lotr.date.shire.month.afterlithe=Послијелит
+lotr.date.shire.month.afteryule=Послијејул 
+lotr.date.shire.month.astron=Астрон
+lotr.date.shire.month.blotmath=Блотмат
+lotr.date.shire.month.forelithe=Форлит
+lotr.date.shire.month.foreyule=Форјул
+lotr.date.shire.month.halimath=Халимат
+lotr.date.shire.month.lithe1=1 Лит
+lotr.date.shire.month.lithe2=2 Лит
+lotr.date.shire.month.midyearsday=Средњогодишњи Дан
+lotr.date.shire.month.overlithe=Преколит
+lotr.date.shire.month.rethe=Рете
+lotr.date.shire.month.solmath=Солмат
+lotr.date.shire.month.thrimidge=Тримиџ
+lotr.date.shire.month.wedmath=Ведмат
+lotr.date.shire.month.winterfilth=Прљозима
+lotr.date.shire.month.yule1=1 Јул
+lotr.date.shire.month.yule2=2 Јул
+
+lotr.gui.daleCracker=
+
+lotr.biome.forodwaith.name=Фородвајт
+lotr.biome.forodwaithCoast.name=
+lotr.biome.forodwaithGlacier.name=Фородвајтски Глечер
+lotr.biome.forodwaithMountains.name=Фородwајтске Планине
+
+lotr.achievement.category.FORODWAITH=фородвајт
+lotr.achievement.enterForodwaith.desc=Уђите у регију фородвајта 
+
+lotr.faction.FANGORN.entity=Фангорн
+lotr.faction.FANGORN.name=Фангорн
+
+lotr.faction.UTUMNO.entity=Мресто Утумноа 
+lotr.faction.UTUMNO.name=Утумно
+lotr.faction.UTUMNO.subtitle=
+
+entity.lotr.GondorRuinsWraith.name=Утвара Гондорских Остатака
+entity.lotr.ShirePony.name=Шајерски Пони
+
+item.lotr.cracker.sealedByDale=
+item.lotr:bodyDolAmrothGambeson.name=
+item.lotr:daleCracker.name=
+item.lotr:dalishPastry.name=Долски Колач
+item.lotr:hobbitPancake.name=Хобитска Палачинка
+item.lotr:hobbitPancakeMapleSyrup.name=Хобитска Палачинка са Сирупом од Јавора
+item.lotr:legsDolAmrothGambeson.name=
+
+tile.lotr:beacon.name=Свјетионик Гондора
+tile.lotr:chandelier.10.name=Лустер Високих Вилењака
+tile.lotr:chandelier.12.name=
+tile.lotr:doorMirkOak.name=
+tile.lotr:doorShirePine.name=
+tile.lotr:fence.0.name=Ограда од Шајер Боровине
+tile.lotr:fence.2.name=Ограда од Мрко-храстовине
+tile.lotr:fenceGateMirkOak.name=
+tile.lotr:fenceGateShirePine.name=
+tile.lotr:gateElven.name=
+tile.lotr:gateHighElven.name=
+tile.lotr:leaves.0.name=Шајер-Борово Лишће
+tile.lotr:leaves.2.name=Мрко-храстово Лишће
+tile.lotr:mirkVines.name=
+
+tile.lotr:mordorGrass.name=Мордорско Жбуње
+
+tile.lotr:planks.0.name=Даске од Шајер Бора
+tile.lotr:planks.2.name=Даске од Мрко-Храста
+tile.lotr:sapling.0.name=Младо Шајерово дрво
+tile.lotr:sapling.2.name=Младо Мрко-храстово дрво
+tile.lotr:shireHeather.name=Шајер Вријесак
+tile.lotr:stairsMirkOak.name=Степенице од Мрко-храстовине
+tile.lotr:stairsPine.name=Степенице од Шајер-боровог дрвета
+
+tile.lotr:wood.0.name=Шајер Борово Дрво
+tile.lotr:wood.2.name=Мрко-храстово Дрво
+tile.lotr:woodBeam1.0.name=
+tile.lotr:woodBeam1.2.name=
+tile.lotr:woodSlabSingle.0.name=Дрвена Плоча од Шајер бора
+tile.lotr:woodSlabSingle.2.name=Дрвена Плоча од Мрко-храстовог дрвета
+
+tile.lotr:rock.1.name=Гондорска Стијена
+lotr.structure.RuinedRohanWatchtower.name=Уништени Рохански Извиђачки Торањ
+
+entity.lotr.IronHillsMerchant.name=
+
+lotr.achievement.tradeIronHillsMerchant.title=
+lotr.achievement.tradeIronHillsMerchant.desc=
+lotr.achievement.openDaleCracker.title=
+lotr.achievement.openDaleCracker.desc=
+
+tile.lotr:hobbitOven.name=Хобитска Пећница
+container.lotr.hobbitOven=Хобитска Пећница
+lotr.achievement.useDunlendingTrident.title=Улов дана!
+lotr.achievement.useDunlendingTrident.desc=Уловите рибу са Дунлендингским Трозубцем 
+
+lotr.faction.FANGORN.rank.newcomer=
+lotr.faction.FANGORN.rank.newcomer.f=
+lotr.faction.FANGORN.rank.friend=
+lotr.faction.FANGORN.rank.friend.f=
+lotr.faction.FANGORN.rank.treeherd=
+lotr.faction.FANGORN.rank.treeherd.f=
+lotr.faction.FANGORN.rank.master=
+lotr.faction.FANGORN.rank.master.f=
+lotr.faction.FANGORN.rank.elder=
+lotr.faction.FANGORN.rank.elder.f=
+
+item.lotr:maceMallornCharred.name=
+
+tile.lotr:blueDwarvenCraftingTable.name=Радни Сто Плавих Патуљака
+container.lotr.crafting.blueDwarven=
+
+tile.lotr:trapdoorMirkOak.name=
+
+entity.lotr.BlueDwarf.name=Плави Патуљак
+entity.lotr.BlueDwarfWarrior.name=Ратник Плавих Патуљака
+entity.lotr.BlueDwarfAxeThrower.name=Бацач Сјекира Плавих Патуљака
+entity.lotr.BlueDwarfBannerBearer.name=Носилац Барјака Плавих Патуљака 
+entity.lotr.BlueDwarfCommander.name=Командант Плавих Патуљака
+entity.lotr.BlueDwarfMiner.name=Рудар Плавих Патуљака
+
+item.lotr:swordBlueDwarven.name=Мач Плавих Патуљака
+item.lotr:daggerBlueDwarven.name=Бодеж Плавих Патуљака
+item.lotr:daggerBlueDwarvenPoisoned.name=Отровани Бодеж Плавих Патуљака
+item.lotr:battleaxeBlueDwarven.name=Ратна Сјекира Плавих Патуљака
+item.lotr:hammerBlueDwarven.name=Чекић Плавих Патуљака
+item.lotr:throwingAxeBlueDwarven.name=Бацајућа Сјекира Плавих Патуљака
+item.lotr:helmetBlueDwarven.name=Шљем Плавих Патуљака
+item.lotr:bodyBlueDwarven.name=Прсни Оклоп Плавих Патуљака
+item.lotr:legsBlueDwarven.name=Докољенице Плавих Патуљака
+item.lotr:bootsBlueDwarven.name=Чизме Плавих Патуљака
+item.lotr:spearBlueDwarven.name=Копље Плавих Патуљака
+item.lotr:pikeBlueDwarven.name=
+
+item.lotr:redBook.name=Црвена Књига
+
+item.lotr:mallornNut.name=Малорнов Орах
+tile.lotr:highElvenTorch.name=Бакља Високих Високих Вилењака

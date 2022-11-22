@@ -1,0 +1,148 @@
+
+lotr.menu.title=
+
+lotr.date.shire=C.C.
+lotr.date.shire.day.hevensday=Hevensday
+lotr.date.shire.day.highday=Highday
+lotr.date.shire.day.mersday=Mersday
+lotr.date.shire.day.monday=Monday
+lotr.date.shire.day.sterday=Sterday
+lotr.date.shire.day.sunday=Sunday
+lotr.date.shire.day.trewsday=Trewsday
+lotr.date.shire.long=Cómputo de la Comarca
+lotr.date.shire.month.afterlithe=Afterlithe
+lotr.date.shire.month.afteryule=Afteryule
+lotr.date.shire.month.astron=Astron
+lotr.date.shire.month.blotmath=Blotmath
+lotr.date.shire.month.forelithe=Forelithe
+lotr.date.shire.month.foreyule=Foreyule
+lotr.date.shire.month.halimath=Halimath
+lotr.date.shire.month.lithe1=1 día Lithe
+lotr.date.shire.month.lithe2=2 día Lithe
+lotr.date.shire.month.midyearsday=Mitad de año
+lotr.date.shire.month.overlithe=Overlithe
+lotr.date.shire.month.rethe=Rethe
+lotr.date.shire.month.solmath=Solmath
+lotr.date.shire.month.thrimidge=Thrimidge
+lotr.date.shire.month.wedmath=Wedmath
+lotr.date.shire.month.winterfilth=Winterfilth
+lotr.date.shire.month.yule1=1 Yule
+lotr.date.shire.month.yule2=2 Yule
+
+lotr.gui.daleCracker=
+
+lotr.biome.forodwaith.name=Forodwaith
+lotr.biome.forodwaithCoast.name=
+lotr.biome.forodwaithGlacier.name=Glaciar de Forodwaith
+lotr.biome.forodwaithMountains.name=Montañas de Forodwaith
+
+lotr.achievement.category.FORODWAITH=Forodwaith
+lotr.achievement.enterForodwaith.desc=Entrá a la región de Forodwaith
+
+lotr.faction.FANGORN.entity=Fangorn
+lotr.faction.FANGORN.name=Fangorn
+
+lotr.faction.UTUMNO.entity=Engendros de Utumno
+lotr.faction.UTUMNO.name=Utumno
+lotr.faction.UTUMNO.subtitle=Las criaturas más antiguas y fétidas
+
+entity.lotr.GondorRuinsWraith.name=Tumulario de Ruinas de Gondor
+entity.lotr.ShirePony.name=Pony de 
+
+item.lotr.cracker.sealedByDale=
+item.lotr:bodyDolAmrothGambeson.name=
+item.lotr:daleCracker.name=
+item.lotr:dalishPastry.name=Pastel Dalés
+item.lotr:hobbitPancake.name=Panqueque de Hobbits
+item.lotr:hobbitPancakeMapleSyrup.name=Panqueque de Hobbits con Jarabe de Arce
+item.lotr:legsDolAmrothGambeson.name=
+
+tile.lotr:beacon.name=Almenara de Gondor
+tile.lotr:chandelier.10.name=Lámpara de Araña de Altos Elfos
+tile.lotr:chandelier.12.name=
+tile.lotr:doorMirkOak.name=
+tile.lotr:doorShirePine.name=
+tile.lotr:fence.0.name=Valla de Madera de Pino de la Comarca
+tile.lotr:fence.2.name=Valla de Madera de Roble Negro
+tile.lotr:fenceGateMirkOak.name=
+tile.lotr:fenceGateShirePine.name=
+tile.lotr:gateElven.name=
+tile.lotr:gateHighElven.name=
+tile.lotr:leaves.0.name=Hojas de Pino de la Comarca
+tile.lotr:leaves.2.name=Hojas de Roble Negro
+tile.lotr:mirkVines.name=
+
+tile.lotr:mordorGrass.name=Zarzas de Mordor
+
+tile.lotr:planks.0.name=Tablones de Madera de Pino de la Comarca
+tile.lotr:planks.2.name=Tablones de Madera de Roble Negro
+tile.lotr:sapling.0.name=Arbolito de Pino de la Comarca
+tile.lotr:sapling.2.name=Arbolito de Roble Negro
+tile.lotr:shireHeather.name=Brezo de la Comarca
+tile.lotr:stairsMirkOak.name=Escaleras de Madera de Roble Negro
+tile.lotr:stairsPine.name=Escaleras de Madera de Pino de la Comarca
+
+tile.lotr:wood.0.name=Madera de Pino de la Comarca
+tile.lotr:wood.2.name=Madera de Roble Negro
+tile.lotr:woodBeam1.0.name=
+tile.lotr:woodBeam1.2.name=
+tile.lotr:woodSlabSingle.0.name=Losa de Madera de Pino de la Comarca
+tile.lotr:woodSlabSingle.2.name=Losa de Madera de Roble Negro
+
+tile.lotr:rock.1.name=Piedra de Gondor
+lotr.structure.RuinedRohanWatchtower.name=Torre de Vigilancia de Rohan en Ruinas
+
+entity.lotr.IronHillsMerchant.name=
+
+lotr.achievement.tradeIronHillsMerchant.title=
+lotr.achievement.tradeIronHillsMerchant.desc=
+lotr.achievement.openDaleCracker.title=
+lotr.achievement.openDaleCracker.desc=
+
+tile.lotr:hobbitOven.name=Horno de Hobbits
+container.lotr.hobbitOven=Horno de Hobbits
+lotr.achievement.useDunlendingTrident.title=Pesca del Día
+lotr.achievement.useDunlendingTrident.desc=Atrapá a un pez con un Tridente Dunlendino
+
+lotr.faction.FANGORN.rank.newcomer=
+lotr.faction.FANGORN.rank.newcomer.f=
+lotr.faction.FANGORN.rank.friend=
+lotr.faction.FANGORN.rank.friend.f=
+lotr.faction.FANGORN.rank.treeherd=
+lotr.faction.FANGORN.rank.treeherd.f=
+lotr.faction.FANGORN.rank.master=
+lotr.faction.FANGORN.rank.master.f=
+lotr.faction.FANGORN.rank.elder=
+lotr.faction.FANGORN.rank.elder.f=
+
+item.lotr:maceMallornCharred.name=
+
+tile.lotr:blueDwarvenCraftingTable.name=Mesa de Trabajo de las Montañas Azules
+container.lotr.crafting.blueDwarven=Mesa de Trabajo de las Montañas Azules
+
+tile.lotr:trapdoorMirkOak.name=
+
+entity.lotr.BlueDwarf.name=Enano de las Montañas Azules
+entity.lotr.BlueDwarfWarrior.name=Guerrero de las Montañas Azules
+entity.lotr.BlueDwarfAxeThrower.name=Lanzador de Hachas de las Montañas Azules
+entity.lotr.BlueDwarfBannerBearer.name=Portaestandarte de las Montañas Azules
+entity.lotr.BlueDwarfCommander.name=Comandante de las Montañas Azules
+entity.lotr.BlueDwarfMiner.name=Minero de las Montañas Azules
+
+item.lotr:swordBlueDwarven.name=Espada de Enanos Azules
+item.lotr:daggerBlueDwarven.name=Daga de Enanos Azules
+item.lotr:daggerBlueDwarvenPoisoned.name=Daga Envenenada de Enanos Azules
+item.lotr:battleaxeBlueDwarven.name=Hacha de Guerra de Enanos Azules
+item.lotr:hammerBlueDwarven.name=Martillo de Guerra de Enanos Azules
+item.lotr:throwingAxeBlueDwarven.name=Hacha Arrojadiza de Enanos Azules
+item.lotr:helmetBlueDwarven.name=Casco de Enanos Azules
+item.lotr:bodyBlueDwarven.name=Caleco de Enanos Azules
+item.lotr:legsBlueDwarven.name=Pantalones de Enanos Azules
+item.lotr:bootsBlueDwarven.name=Botas de Enanos Azules
+item.lotr:spearBlueDwarven.name=Lanza de Enanos Azules
+item.lotr:pikeBlueDwarven.name=
+
+item.lotr:redBook.name=Libro Rojo
+
+item.lotr:mallornNut.name=Nuez de Mallorn
+tile.lotr:highElvenTorch.name=Antorcha de Altos Elfos

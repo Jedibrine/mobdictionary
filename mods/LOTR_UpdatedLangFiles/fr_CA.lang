@@ -1,0 +1,148 @@
+
+lotr.menu.title=Le Mod Seigneur des Anneaux : Minecraft en Terre du Milieu
+
+lotr.date.shire=C.C.
+lotr.date.shire.day.hevensday=Hevensday
+lotr.date.shire.day.highday=Highday
+lotr.date.shire.day.mersday=Mersday
+lotr.date.shire.day.monday=Monday
+lotr.date.shire.day.sterday=Sterday
+lotr.date.shire.day.sunday=Sunday
+lotr.date.shire.day.trewsday=Trewsday
+lotr.date.shire.long=Calendrier de la Comté
+lotr.date.shire.month.afterlithe=Afterlithe
+lotr.date.shire.month.afteryule=Afteryule
+lotr.date.shire.month.astron=Astron
+lotr.date.shire.month.blotmath=Blotmath
+lotr.date.shire.month.forelithe=Forelithe
+lotr.date.shire.month.foreyule=Foreyule
+lotr.date.shire.month.halimath=Halimath
+lotr.date.shire.month.lithe1=Lithe 1
+lotr.date.shire.month.lithe2=Lithe 2
+lotr.date.shire.month.midyearsday=Mitan de l'année
+lotr.date.shire.month.overlithe=Overlithe
+lotr.date.shire.month.rethe=Rethe
+lotr.date.shire.month.solmath=Solmath
+lotr.date.shire.month.thrimidge=Thrimidge
+lotr.date.shire.month.wedmath=Wedmath
+lotr.date.shire.month.winterfilth=Winterfilth
+lotr.date.shire.month.yule1=Yule 1
+lotr.date.shire.month.yule2=Yule 2
+
+lotr.gui.daleCracker=Pétard surprise dalien
+
+lotr.biome.forodwaith.name=Forodwaith
+lotr.biome.forodwaithCoast.name=Côte de Forodwaith
+lotr.biome.forodwaithGlacier.name=Glacier de Forodwaith
+lotr.biome.forodwaithMountains.name=Montagnes de Forodwaith
+
+lotr.achievement.category.FORODWAITH=Forodwaith
+lotr.achievement.enterForodwaith.desc=Entrez dans la région du Forodwaith
+
+lotr.faction.FANGORN.entity=Choses-arbres de Fangorn
+lotr.faction.FANGORN.name=Fangorn
+
+lotr.faction.UTUMNO.entity=Créatures d'Utumno
+lotr.faction.UTUMNO.name=Utumno
+lotr.faction.UTUMNO.subtitle=Les plus vieilles et les plus viles des créatures
+
+entity.lotr.GondorRuinsWraith.name=Spectre de ruine du Gondor
+entity.lotr.ShirePony.name=Poney de la Comté
+
+item.lotr.cracker.sealedByDale=les fabriquants de jouets daliens
+item.lotr:bodyDolAmrothGambeson.name=Gambeson de Dol Amroth
+item.lotr:daleCracker.name=Pétard surprise dalien
+item.lotr:dalishPastry.name=Pâtisserie dalienne
+item.lotr:hobbitPancake.name=Crêpe hobbit
+item.lotr:hobbitPancakeMapleSyrup.name=Crêpe hobbit avec sirop d'érable
+item.lotr:legsDolAmrothGambeson.name=Jambières de cuir de Dol Amroth
+
+tile.lotr:beacon.name=Feu d'alarme du Gondor
+tile.lotr:chandelier.10.name=Lustre des hauts elfes
+tile.lotr:chandelier.12.name=Lustre de Morgul
+tile.lotr:doorMirkOak.name=Porte en chêne corrompu
+tile.lotr:doorShirePine.name=Porte en pin de la Comté
+tile.lotr:fence.0.name=Clôture en pin de la Comté
+tile.lotr:fence.2.name=Clôture en chêne corrompu
+tile.lotr:fenceGateMirkOak.name=Porte de clôture en chêne corrompu
+tile.lotr:fenceGateShirePine.name=Porte de clôture en pin de la Comté
+tile.lotr:gateElven.name=Portail galadhrim
+tile.lotr:gateHighElven.name=Portail des hauts elfes
+tile.lotr:leaves.0.name=Feuilles de pin de la Comté
+tile.lotr:leaves.2.name=Feuilles de chêne corrompu
+tile.lotr:mirkVines.name=Lianes de la Forêt noire
+
+tile.lotr:mordorGrass.name=Broussailles du Mordor
+
+tile.lotr:planks.0.name=Planches de pin de la Comté
+tile.lotr:planks.2.name=Planches de chêne corrompu
+tile.lotr:sapling.0.name=Pousse de pin de la Comté
+tile.lotr:sapling.2.name=Pousse de chêne corrompu
+tile.lotr:shireHeather.name=Bruyère de la Comté
+tile.lotr:stairsMirkOak.name=Escaliers en bois de chêne corrompu
+tile.lotr:stairsPine.name=Escaliers en bois de pin de la Comté
+
+tile.lotr:wood.0.name=Bois de pin de la Comté
+tile.lotr:wood.2.name=Bois de chêne corrompu
+tile.lotr:woodBeam1.0.name=Poutre en pin de la Comté
+tile.lotr:woodBeam1.2.name=Poutre en chêne corrompu
+tile.lotr:woodSlabSingle.0.name=Dalle en bois de pin de la Comté
+tile.lotr:woodSlabSingle.2.name=Dalle en bois de chêne corrompu
+
+tile.lotr:rock.1.name=Roche du Gondor
+lotr.structure.RuinedRohanWatchtower.name=Tour de garde en ruines du Rohan
+
+entity.lotr.IronHillsMerchant.name=Marchand des Collines de fer
+
+lotr.achievement.tradeIronHillsMerchant.title=Trésors nains
+lotr.achievement.tradeIronHillsMerchant.desc=Commercez avec un marchand des Collines de fer
+lotr.achievement.openDaleCracker.title=Surprise !
+lotr.achievement.openDaleCracker.desc=Ouvrez un pétard surprise de Dale
+
+tile.lotr:hobbitOven.name=Fourneau hobbit
+container.lotr.hobbitOven=Fourneau hobbit
+lotr.achievement.useDunlendingTrident.title=Prise de la journée
+lotr.achievement.useDunlendingTrident.desc=Prenez un poisson avec un trident de Dun
+
+lotr.faction.FANGORN.rank.newcomer=Nouveau venu
+lotr.faction.FANGORN.rank.newcomer.f=Nouveau venu de Fangorn
+lotr.faction.FANGORN.rank.friend=Ami
+lotr.faction.FANGORN.rank.friend.f=Ami de Fangorn
+lotr.faction.FANGORN.rank.treeherd=Berger des arbres
+lotr.faction.FANGORN.rank.treeherd.f=Berger des arbres de Fangorn
+lotr.faction.FANGORN.rank.master=Maître
+lotr.faction.FANGORN.rank.master.f=Maître de Fangorn
+lotr.faction.FANGORN.rank.elder=Ancien
+lotr.faction.FANGORN.rank.elder.f=Ancien de Fangorn
+
+item.lotr:maceMallornCharred.name=Massue en mallorn calcinée
+
+tile.lotr:blueDwarvenCraftingTable.name=Établi des Montagnes bleues
+container.lotr.crafting.blueDwarven=Fabrication des Montagnes bleues
+
+tile.lotr:trapdoorMirkOak.name=Trappe en chêne corrompu
+
+entity.lotr.BlueDwarf.name=Nain bleu
+entity.lotr.BlueDwarfWarrior.name=Guerrier nain bleu
+entity.lotr.BlueDwarfAxeThrower.name=Lanceur de haches nain bleu
+entity.lotr.BlueDwarfBannerBearer.name=Porte-bannière des Montagnes bleues
+entity.lotr.BlueDwarfCommander.name=Commandant nain bleu
+entity.lotr.BlueDwarfMiner.name=Mineur nain bleu
+
+item.lotr:swordBlueDwarven.name=Épée naine bleue
+item.lotr:daggerBlueDwarven.name=Dague naine bleue
+item.lotr:daggerBlueDwarvenPoisoned.name=Dague naine bleue empoisonnée
+item.lotr:battleaxeBlueDwarven.name=Hache de bataille naine bleue
+item.lotr:hammerBlueDwarven.name=Marteau de guerre nain bleu
+item.lotr:throwingAxeBlueDwarven.name=Hache de lancer naine bleue
+item.lotr:helmetBlueDwarven.name=Casque nain bleu
+item.lotr:bodyBlueDwarven.name=Plastron nain bleu
+item.lotr:legsBlueDwarven.name=Jambières naines bleues
+item.lotr:bootsBlueDwarven.name=Bottes naines bleues
+item.lotr:spearBlueDwarven.name=Lance naine bleue
+item.lotr:pikeBlueDwarven.name=Pique naine bleue
+
+item.lotr:redBook.name=Livre rouge
+
+item.lotr:mallornNut.name=Noix de mallorn
+tile.lotr:highElvenTorch.name=Torche des hauts elfes

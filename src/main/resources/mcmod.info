@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mobdictionary",
+  "name": "MobDictionary",
+  "description": "Remake of Ayamitsu's version.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ayamitsu for original mod, jediexe for small changes, KibaTheBarbarian for commission"],
+  "credits": "Most of the code is from ayamitsu's original mod",
+  "logoFile": "icon.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

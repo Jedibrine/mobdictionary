@@ -1,21 +1,38 @@
 package ayamitsu.mobdictionary.client.gui;
 
-import ayamitsu.mobdictionary.util.*;
-import net.minecraft.client.gui.*;
-import org.lwjgl.opengl.*;
-import net.minecraft.entity.*;
-import net.minecraft.world.*;
-import net.minecraft.client.renderer.entity.*;
-import net.minecraft.client.renderer.*;
-import org.lwjgl.input.*;
-import net.minecraft.util.*;
-import java.util.*;
-import net.minecraft.init.*;
-import ayamitsu.mobdictionary.*;
-import net.minecraft.item.*;
-import net.minecraft.nbt.*;
-import ayamitsu.mobdictionary.item.*;
-import net.minecraft.entity.player.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.lwjgl.input.Mouse;
+import org.lwjgl.opengl.GL11;
+
+import ayamitsu.mobdictionary.MobDatas;
+import ayamitsu.mobdictionary.MobDictionary;
+import ayamitsu.mobdictionary.item.ItemMobData;
+import ayamitsu.mobdictionary.util.EntityUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeHooks;
 
 public class GuiMobDictionary extends GuiScreen
 {
@@ -36,13 +53,14 @@ public class GuiMobDictionary extends GuiScreen
     protected float entityScale;
     protected double yaw;
     protected double yaw2;
+    protected double pitch;
     private static final List<String> tooltipStringList;
     
     public GuiMobDictionary() {
         this.xSize = 176;
         this.ySize = 166;
         this.stringColor = 3158064;
-        this.stringYMargin = 6;
+        this.stringYMargin = 3;
         this.scrollAmount = 0;
         this.sizeNameAreaX = 60;
         this.currentNo = 0;
@@ -52,6 +70,7 @@ public class GuiMobDictionary extends GuiScreen
         this.entityScale = 1.0f;
         this.yaw = 0.0;
         this.yaw2 = 0.0;
+        this.pitch = 0.0;
     }
     
     public void initGui() {
@@ -69,13 +88,13 @@ public class GuiMobDictionary extends GuiScreen
         Arrays.sort(this.nameList);
         final int originX = this.width - this.xSize >> 1;
         final int originY = this.height - this.ySize >> 1;
-        final GuiButton button = (GuiButton)new GuiButtonMobDictionary(0, originX + 19, originY + 136, "");
+        final GuiButton button = (GuiButton)new GuiButtonMobDictionary(0, originX + 18, originY + 136, "");
         button.enabled = (this.nameList.length > 0);
         this.buttonList.add(button);
     }
     
     public boolean doesGuiPauseGame() {
-        return false;
+    	return true;
     }
     
     public void drawScreen(final int mouseX, final int mouseY, final float partialTicks) {
@@ -88,8 +107,8 @@ public class GuiMobDictionary extends GuiScreen
         this.drawMobNames(mouseX, mouseY, partialTicks);
         super.drawScreen(mouseX, mouseY, partialTicks);
         this.drawTooltip(mouseX, mouseY, partialTicks);
-        //this.yaw = 2.0 + this.yaw2 + (this.yaw2 - this.yaw) * partialTicks;
-        this.yaw = 20.0;
+        this.yaw = 2.0;
+        this.pitch = 0.0;
     }
     
     public void drawGuiBackgroundLayer(final int mouseX, final int mouseY, final float partialTicks) {
@@ -103,33 +122,78 @@ public class GuiMobDictionary extends GuiScreen
     public void drawMobInfo(final int mouseX, final int mouseY, final float partialTicks) {
         final int originX = this.width - this.xSize >> 1;
         final int originY = this.height - this.ySize >> 1;
+        ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
+        int sheight = sr.getScaledHeight();
+        int swidth = sr.getScaledWidth();
+        GL11.glScalef(0.5f, 0.5f, 0.5f);
         if (this.nameList.length > 0) {
             final NamePair pair = this.nameList[this.currentNo];
-            this.fontRendererObj.drawString("Name:", originX + 19, originY + 85, this.stringColor);
-            this.fontRendererObj.drawString(pair.localized, originX + 19, originY + 95, this.stringColor);
+            this.fontRendererObj.drawString("Name:", swidth-148, sheight, this.stringColor);
+            this.fontRendererObj.drawString(pair.localized, swidth-148, sheight+8, this.stringColor);
             if (this.displayEntity instanceof EntityLivingBase) {
                 final EntityLivingBase living = (EntityLivingBase)this.displayEntity;
-                this.fontRendererObj.drawString("Health:", originX + 19, originY + 106, this.stringColor);
-                this.fontRendererObj.drawString(String.format("%.1f", living.getMaxHealth()), originX + 19, originY + 116, this.stringColor);
+                this.fontRendererObj.drawString("Health:", swidth-148, sheight+20, this.stringColor);
+                this.fontRendererObj.drawString(String.format("%.1f", living.getMaxHealth()), swidth-148, sheight+28, this.stringColor);
+                //any future attributes to show added here
             }
         }
+        GL11.glScalef(2.0f, 2.0f, 2.0f);
     }
     
     public void drawMobNames(final int mouseX, final int mouseY, final float partialTicks) {
         final int originX = (this.width - this.xSize) / 2;
         final int originY = (this.height - this.ySize) / 2;
-        final String str = MobDatas.getRegisteredValue() + "/" + MobDatas.getAllMobValue();
+        String str = MobDatas.getRegisteredValue() + "/" + MobDatas.getAllMobValue();
+        int blacklistlength = 1;
+        char[] blacklist = MobDictionary.blacklistedEntities.toCharArray();
+        char comma = ',';
+        for (int i=0; i<blacklist.length; i++) {
+        	if (blacklist[i]==comma) {
+        		blacklistlength++;
+        	}
+        }
+        if (MobDictionary.maxNumber==0) {
+        	str = MobDatas.getRegisteredValue() + "/" + MobDatas.getAllMobValue();
+        }
+        else if (MobDictionary.maxNumber==-1) {
+        	int outof =  MobDatas.getAllMobValue()-blacklistlength;
+        	str = MobDatas.getRegisteredValue() + "/" + outof;
+        }
+        else if (MobDictionary.maxNumber%1==0){
+            str = MobDatas.getRegisteredValue() + "/" + MobDictionary.maxNumber;
+        }
         this.fontRendererObj.drawString(str, originX + this.namesCenterOffsetX - this.fontRendererObj.getStringWidth(str) / 2, originY + 8, this.stringColor);
+        ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
+        int sheight = sr.getScaledHeight();
+        int swidth = sr.getScaledWidth();
         if (this.nameList.length > 0) {
             for (int i = 0; i < this.nameList.length; ++i) {
-                if (this.topEdge + (i + 1) * (this.stringHeight + this.stringYMargin) > this.ySize - this.bottomEdge) {
-                    break;
+            	if (this.nameList.length>21 && this.scrollAmount>(this.nameList.length-21)) {
+            		this.scrollAmount=this.nameList.length-21;
+            	}
+                if (this.topEdge + (i + 1) * (this.stringHeight + this.stringYMargin) > this.ySize + 120 - this.bottomEdge) {
+                	break;
                 }
-                final int var1 = i + this.scrollAmount;
-                final String translatedName = this.nameList[var1].localized;
+                int var2 = i + this.scrollAmount;
+                if (var2>this.nameList.length) {
+                	break;
+                }
+                if (i>21) {
+	                while (var2>=this.nameList.length) {
+	                	var2=this.nameList.length-1;
+	                	this.scrollAmount-=1;
+	                	var2 = i + this.scrollAmount;
+	            	}
+                }
+                if (var2>=this.nameList.length) {
+                	var2=this.nameList.length-1;
+                }
+                String translatedName = this.nameList[var2].localized;
                 final int stringWidth = this.fontRendererObj.getStringWidth(translatedName);
-                final int color = (var1 == this.currentNo || this.isMouseInArea(originX + this.namesCenterOffsetX - this.sizeNameAreaX / 2, originX + this.namesCenterOffsetX + this.sizeNameAreaX / 2, originY + this.topEdge + i * (this.stringHeight + this.stringYMargin), originY + this.topEdge + (i * (this.stringHeight + this.stringYMargin) + this.stringHeight))) ? 16777215 : this.stringColor;
-                this.fontRendererObj.drawString(translatedName, originX + this.namesCenterOffsetX - stringWidth / 2, originY + this.topEdge + i * (this.stringHeight + this.stringYMargin), color);
+                final int color = (var2 == this.currentNo || this.isMouseInArea(-6 + originX + this.namesCenterOffsetX - this.sizeNameAreaX / 2, originX + this.namesCenterOffsetX + this.sizeNameAreaX / 2, originY + this.topEdge + i * (this.stringHeight + this.stringYMargin), originY + this.topEdge + (i * (this.stringHeight + this.stringYMargin) + this.stringHeight))) ? 16777215 : this.stringColor;
+                GL11.glScalef(0.5f, 0.5f, 0.5f);
+                this.fontRendererObj.drawString(translatedName, swidth + 6, sheight - 150 + this.topEdge + i * (this.stringHeight + this.stringYMargin), color);
+                GL11.glScalef(2.0f, 2.0f, 2.0f);
             }
         }
     }
@@ -152,13 +216,25 @@ public class GuiMobDictionary extends GuiScreen
             GL11.glEnable(32826);
             GL11.glEnable(2903);
             GL11.glPushMatrix();
-            GL11.glTranslatef((float)(originX + 49), (float)(originY + 70), 50.0f);
-            final float scale = 25.0f;
+            float heightdiff = this.displayEntity.height*10;
+            while (heightdiff>=25) heightdiff/=2;
+            GL11.glTranslatef((float)(originX + 49), (float)(originY + 62+(heightdiff)), 50.0f);
+            float scale = 90.0f/(2*heightdiff/10)+5.0f;
+            while (scale>=50.0f) scale/=2;
+            if (this.displayEntity.height>=2.5) {
+            	heightdiff+=50;
+            	scale/=2;
+            }
+            if (this.displayEntity.getCommandSenderName().contains("Ghast")) {
+            	scale/=1.5;
+            	GL11.glTranslatef(0.0f, -35.0f, 0.0f);
+            }
             GL11.glScalef(-scale, scale, scale);
             GL11.glScalef(this.entityScale, this.entityScale, this.entityScale);
             GL11.glRotatef(180.0f, 0.0f, 0.0f, 1.0f);
-            final float xRot = (float)(this.yaw2 + (this.yaw - this.yaw2) * partialTicks * 10.0);
-            GL11.glRotatef(xRot, 0.0f, 1.0f, 0.0f);
+            final float xRot = (float)(this.yaw*10.0f);
+            final float yRot = (float)(this.pitch*10.0f);
+            GL11.glRotatef(xRot, yRot, 1.0f, 0.0f);
             final RenderManager manager = RenderManager.instance;
             manager.playerViewY = 180.0f;
             manager.renderEntityWithPosYaw(this.displayEntity, 0.0, 0.0, 0.0, 0.0f, 0.0f);
@@ -170,8 +246,11 @@ public class GuiMobDictionary extends GuiScreen
     }
     
     protected boolean isMouseInArea(final int x1, final int x2, final int y1, final int y2) {
-        final int mouseX = Mouse.getEventX() * this.width / this.mc.displayWidth;
-        final int mouseY = this.height - Mouse.getEventY() * this.height / this.mc.displayHeight;
+    	ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
+        int sheight = sr.getScaledHeight();
+        int swidth = sr.getScaledWidth();
+        final int mouseX = swidth * Mouse.getEventX() / this.mc.displayWidth;
+        final int mouseY = sheight + 65 + sheight/2 - Mouse.getEventY();
         final boolean flag = x1 <= mouseX && mouseX < x2 && y1 <= mouseY && mouseY < y2;
         return flag;
     }
@@ -217,15 +296,21 @@ public class GuiMobDictionary extends GuiScreen
     }
     
     protected void mouseClicked(final int mouseX, final int mouseY, final int mouseButton) {
+    	ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
+        int sheight = sr.getScaledHeight();
+        int swidth = sr.getScaledWidth();
         super.mouseClicked(mouseX, mouseY, mouseButton);
-        final int originX = (this.width - this.xSize) / 2;
-        final int originY = (this.height - this.ySize) / 2;
+        final int originX = ((this.width - this.xSize) / 2);
+        final int originY = (sheight - this.ySize) / 2;
         for (int i = 0; i < this.nameList.length; ++i) {
-            if (this.topEdge + (i + 1) * (this.stringHeight + this.stringYMargin) > this.ySize - this.bottomEdge) {
+        	if (i>=(this.nameList.length)) {
+        		break;
+        	}
+            if (this.topEdge + (i + 1) * (this.stringHeight + this.stringYMargin) > (sheight +33)) {
                 break;
             }
             final int var1 = i + this.scrollAmount;
-            if (this.isMouseInArea(originX + this.namesCenterOffsetX - this.sizeNameAreaX / 2, originX + this.namesCenterOffsetX + this.sizeNameAreaX / 2, originY + this.topEdge + i * (this.stringHeight + this.stringYMargin), originY + this.topEdge + (i * (this.stringHeight + this.stringYMargin) + this.stringHeight))) {
+            if (this.isMouseInArea(-6 + originX + this.namesCenterOffsetX - this.sizeNameAreaX / 2, originX + this.namesCenterOffsetX + this.sizeNameAreaX / 2, originY + this.topEdge + i * (this.stringHeight + this.stringYMargin), originY + this.topEdge + (i * (this.stringHeight + this.stringYMargin) + this.stringHeight))) {
                 if (this.currentNo != var1) {
                     this.entityScale = 1.0f;
                 }
@@ -234,7 +319,7 @@ public class GuiMobDictionary extends GuiScreen
             }
         }
     }
-    
+
     public void handleMouseInput() {
         super.handleMouseInput();
         this.mouseWheeled();
@@ -244,26 +329,30 @@ public class GuiMobDictionary extends GuiScreen
         final int originX = (this.width - this.xSize) / 2;
         final int originY = (this.height - this.ySize) / 2;
         final int wheel = Mouse.getDWheel();
-        if (this.nameList.length > 0 && this.nameList.length > (this.ySize - this.bottomEdge) / (this.stringHeight + this.stringYMargin) && this.isMouseInArea(originX + this.namesCenterOffsetX - this.sizeNameAreaX / 2, originX + this.namesCenterOffsetX + this.sizeNameAreaX / 2, originY + this.topEdge, originY + this.ySize - this.bottomEdge)) {
-            if (wheel < 0) {
-                ++this.scrollAmount;
-                if (this.scrollAmount > this.nameList.length - (this.ySize - this.bottomEdge) / (this.stringHeight + this.stringYMargin)) {
-                    this.scrollAmount = this.nameList.length - (this.ySize - this.bottomEdge) / (this.stringHeight + this.stringYMargin);
-                }
-            }
-            else if (wheel > 0) {
-                --this.scrollAmount;
-                if (this.scrollAmount < 0) {
-                    this.scrollAmount = 0;
-                }
-            }
+        if (this.nameList.length > 0 && this.nameList.length > (this.ySize - this.bottomEdge) / (this.stringHeight + this.stringYMargin) && this.isMouseInArea(originX + this.namesCenterOffsetX - this.sizeNameAreaX / 2, originX + this.namesCenterOffsetX + this.sizeNameAreaX / 2, originY, originY + 2*this.ySize - 60)) {
+	         if (this.nameList.length>21) {
+        		if (wheel < 0) {
+	                if (this.scrollAmount >= this.nameList.length - (this.ySize - this.bottomEdge) / (this.stringHeight + this.stringYMargin)) {
+	                	this.scrollAmount = this.nameList.length - (this.ySize - this.bottomEdge) / (this.stringHeight + this.stringYMargin);
+	                }
+	                else {
+	                	++this.scrollAmount;
+	                }
+	            }
+	            else if (wheel > 0) {
+	                --this.scrollAmount;
+	                if (this.scrollAmount < 0) {
+	                    this.scrollAmount = 0;
+	                }
+	            }
+	         }
         }
-        if (this.nameList.length > 0 && this.isMouseInArea(originX, originX + 98, originY, originY + 80)) {
+        if (this.nameList.length > 0 && this.isMouseInArea(originX, originX + 98, originY, originY + 120)) {
             if (wheel < 0) {
-                this.entityScale /= 1.2f;
+                this.entityScale /= 1.1f;
             }
             else if (wheel > 0) {
-                this.entityScale *= 1.2f;
+                this.entityScale *= 1.1f;
             }
         }
     }

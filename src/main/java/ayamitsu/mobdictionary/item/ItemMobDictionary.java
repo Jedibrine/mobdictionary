@@ -58,8 +58,26 @@ public class ItemMobDictionary extends Item
     
     @SideOnly(Side.CLIENT)
     public void addInformation(final ItemStack stack, final EntityPlayer playerIn, final List tooltip, final boolean advanced) {
-        final StringBuilder sb = new StringBuilder(StatCollector.translateToLocal("mobdictionary.common.registered_value")).append(": ").append(MobDatas.getRegisteredValue()).append('/').append(MobDatas.getAllMobValue());
-        tooltip.add(sb.toString());
+    	int limit = MobDatas.getAllMobValue();
+    	int blacklistlength = 1;
+        char[] blacklist = MobDictionary.blacklistedEntities.toCharArray();
+        char comma = ',';
+        for (int i=0; i<blacklist.length; i++) {
+        	if (blacklist[i]==comma) {
+        		blacklistlength++;
+        	}
+        }
+    	if (MobDictionary.maxNumber>0) {
+    		limit = MobDictionary.maxNumber;
+    	}
+    	else if (MobDictionary.maxNumber==0) {
+    		limit = MobDatas.getAllMobValue();
+    	}
+    	else {
+    		limit = MobDatas.getAllMobValue()-blacklistlength;
+    	}
+		StringBuilder sb = new StringBuilder(StatCollector.translateToLocal("mobdictionary.common.registered_value")).append(": ").append(MobDatas.getRegisteredValue()).append('/').append(limit);
+    	tooltip.add(sb.toString());
     }
     
     public enum EnumChatMessage

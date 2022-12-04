@@ -1,11 +1,15 @@
 package ayamitsu.mobdictionary.server;
 
-import ayamitsu.mobdictionary.*;
-import net.minecraft.server.*;
-import java.io.*;
-import cpw.mods.fml.server.*;
-import cpw.mods.fml.common.*;
+import java.io.File;
 
+import ayamitsu.mobdictionary.AbstractProxy;
+import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import cpw.mods.fml.server.FMLServerHandler;
+import net.minecraft.server.MinecraftServer;
+
+@SideOnly(Side.SERVER)
 public class ServerProxy extends AbstractProxy
 {
     public void preInit() {

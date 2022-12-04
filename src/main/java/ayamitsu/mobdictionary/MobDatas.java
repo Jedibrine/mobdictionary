@@ -1,7 +1,10 @@
 package ayamitsu.mobdictionary;
 
 import ayamitsu.mobdictionary.util.*;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.*;
+import net.minecraftforge.common.DimensionManager;
+
 import java.io.*;
 import java.util.*;
 
@@ -113,7 +116,7 @@ public final class MobDatas
     
     public static void load() throws IOException {
         MobDatas.nameList.clear();
-        final File dir = MobDictionary.proxy.getSaveDirectory();
+        final File dir = DimensionManager.getCurrentSaveRootDirectory();
         final File file = new File(dir, "/mobdic.md").getAbsoluteFile();
         if (!file.exists()) {
             return;
@@ -148,8 +151,11 @@ public final class MobDatas
     }
     
     public static void save() throws IOException {
-        final File dir = MobDictionary.proxy.getSaveDirectory();
-        final File file = new File(dir, "/mobdic.md").getAbsoluteFile();
+        final File dir = DimensionManager.getCurrentSaveRootDirectory();
+        final File file = new File(dir,"/mobdic.md").getAbsoluteFile();
+        if (dir==null) {
+        	throw new IOException("Dir does not exist, cannot get current save root directory");
+        };
         if (!dir.exists() && !dir.mkdirs()) {
             throw new IOException("Can not write dictionary data:" + file.getPath());
         }

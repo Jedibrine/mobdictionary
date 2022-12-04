@@ -1,7 +1,3 @@
-//Deobfuscated with https://github.com/SimplyProgrammer/Minecraft-Deobfuscator3000 using mappings "C:\Users\jedib\Downloads\Minecraft-Deobfuscator3000-1.2.3\1.7.10 stable mappings"!
-
-//Decompiled by Procyon!
-
 package ayamitsu.mobdictionary.client;
 
 import java.io.File;
@@ -9,21 +5,44 @@ import java.util.HashMap;
 import java.util.List;
 
 import ayamitsu.mobdictionary.AbstractProxy;
+import ayamitsu.mobdictionary.MobDatas;
+import ayamitsu.mobdictionary.MobDictionary;
 import ayamitsu.mobdictionary.client.gui.GuiMobDictionary;
+import ayamitsu.mobdictionary.event.KillChecker;
+import ayamitsu.mobdictionary.item.ItemMobData;
+import ayamitsu.mobdictionary.item.ItemMobDictionary;
+import ayamitsu.mobdictionary.network.PacketHandler;
+import ayamitsu.mobdictionary.network.packet.register.MessageRegister;
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
+import cpw.mods.fml.common.eventhandler.EventPriority;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.network.simpleimpl.IMessage;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.StatCollector;
 import net.minecraft.util.Timer;
 import net.minecraft.util.Vec3;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
+@SideOnly(Side.CLIENT)
 public class ClientProxy extends AbstractProxy
 {
     private static HashMap<Integer, Class<? extends GuiScreen>> guiMap;
@@ -37,6 +56,7 @@ public class ClientProxy extends AbstractProxy
     }
     
     public void postInit() {
+    	MinecraftForge.EVENT_BUS.register(KillChecker.instance);
     }
     
     public void displayScreen(final EntityPlayer player, final int guiID) {

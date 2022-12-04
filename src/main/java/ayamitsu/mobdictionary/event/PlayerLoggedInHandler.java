@@ -1,7 +1,3 @@
-//Deobfuscated with https://github.com/SimplyProgrammer/Minecraft-Deobfuscator3000 using mappings "C:\Users\jedib\Downloads\Minecraft-Deobfuscator3000-1.2.3\1.7.10 stable mappings"!
-
-//Decompiled by Procyon!
-
 package ayamitsu.mobdictionary.event;
 
 import cpw.mods.fml.common.gameevent.*;
@@ -19,7 +15,7 @@ public class PlayerLoggedInHandler
     @SubscribeEvent
     public void onPlayerLoggedIn(final PlayerEvent.PlayerLoggedInEvent event) {
         if (event.player instanceof EntityPlayerMP) {
-            final EntityPlayerMP player = (EntityPlayerMP)event.player;
+            EntityPlayerMP player = (EntityPlayerMP)event.player;
             if (MobDictionary.proxy.isDedicatedServer()) {
                 try {
                     MobDatas.loadOnDedicatedServer(player);

@@ -3,7 +3,7 @@
   "modid": "mobdictionary",
   "name": "MobDictionary",
   "description": "Remake of Ayamitsu's version.",
-  "version": "${version}",
+  "version": "1.4",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
